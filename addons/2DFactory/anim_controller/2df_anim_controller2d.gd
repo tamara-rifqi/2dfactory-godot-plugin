@@ -136,7 +136,7 @@ func _apply_pivot(anim_frame_tags: Dictionary):
 	centered = true
 	offset = Vector2(
 		-pivot.x,
-		-pivot.y
+		pivot.y
 	)
 
 func _apply_socket(anim_frame_tags: Dictionary, frame_index: int):
@@ -197,7 +197,7 @@ func _apply_socket(anim_frame_tags: Dictionary, frame_index: int):
 		var socket_sy := float(socket_data.get("sy", 1.0))
 
 		var local_x := socket_x - (pivot.x - crop_shift.x)
-		var local_y := socket_y + (pivot.y - crop_shift.y)
+		var local_y := socket_y - (pivot.y - crop_shift.y)
 		var socket_node := get_node_or_null(
 			"Socket/" + str(socket_name)
 		)

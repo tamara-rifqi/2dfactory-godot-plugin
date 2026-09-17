@@ -416,7 +416,7 @@ func _apply_default_2dsocket_transform(
 		var local_x := socket_x - (
 			pivot.x - crop_shift.x
 		)
-		var local_y := socket_y + (
+		var local_y := socket_y - (
 			pivot.y - crop_shift.y
 		)
 		socket_node.position = Vector2(
@@ -516,7 +516,7 @@ func _apply_default_3dsocket_transform(
 		var local_x := socket_x - (
 			pivot.x - crop_shift.x
 		)
-		var local_y := socket_y + (
+		var local_y := socket_y - (
 			pivot.y - crop_shift.y
 		)
 		var pixel_size := animated_sprite.pixel_size

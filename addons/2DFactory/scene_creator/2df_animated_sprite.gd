@@ -304,14 +304,14 @@ func create_or_update(
 				sprite_2d.centered = true
 				sprite_2d.offset = Vector2(
 					-first_pivot.x,
-					-first_pivot.y
+					first_pivot.y
 				)
 			elif sprite_type == "3D":
 				var sprite_3d := animated_sprite as AnimatedSprite3D
 				sprite_3d.centered = true
 				sprite_3d.offset = Vector2(
 					-first_pivot.x,
-					first_pivot.y
+					-first_pivot.y
 				)
 	# ---------------------------------------------------------
 	# Add AnimatedSprite to scene
